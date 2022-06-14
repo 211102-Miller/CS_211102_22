@@ -11,8 +11,11 @@
   "author": "Miller 211220",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.20.1",
     "socket.io": "^4.5.0"
   },
   "devDependencies": {
