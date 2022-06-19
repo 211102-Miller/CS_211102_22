@@ -17,9 +17,14 @@ async function getConnection(){
 }
 
 const SequelizeClient = new Sequelize(db.database, db.user, db.password, {
+    dialectOptions:{
+        ssl: {
+            require: true,
+            rejectUnauthorized:false
+        }
+    },
     host: db.host,
-    port:5433,
-    dialect: "postgres",
+    dialect: 'postgres',
 });
 
 SequelizeClient.authenticate()
